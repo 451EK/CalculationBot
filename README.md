@@ -25,7 +25,7 @@
 
 -This may be the most difficult step because it is hard to host the bot correctly.
 
--I hosted my bot on <a href="replit.com">Repl.it</a>,you can use another site but this one is the more reliable for me.
+-I hosted my bot on <a href="replit.com">Repl.it</a>,you can use another site but this one is more reliable for me.
 
 -Of course,the bot will down when you turn off your pc so you need to keep your bot 24/7 online.I do this with using my Tablet when I'm sleeping,just copy your repl.it link and open that in your device,That's all!
 
