@@ -1,5 +1,7 @@
 <h1>Presentation Of The Bot</h1>
 
+<img src="https://i.imgur.com/FWoe025.png"/>
+
 -Hello,I made a Discord Bot for your basic math operations.
 
 -I used Visual Studio Code as editor and discord.py as library.
