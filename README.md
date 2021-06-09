@@ -38,3 +38,5 @@
 <h2> Current Bot Version </h2>
 
 0.0.1
+
+<h3> Last Update : 9/06/2021
