@@ -39,4 +39,4 @@
 
 0.0.1
 
-<h3> Last Update : 9/06/2021
+<h3> Last Bot Update : 7/06/2021 </h3>
