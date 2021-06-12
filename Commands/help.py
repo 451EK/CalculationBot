@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-class chelp(commands.Cog):
+class Help(commands.Cog):
     def __init__(self,Bot):
         self.Bot = Bot
 
@@ -11,4 +11,4 @@ class chelp(commands.Cog):
         await ctx.send(embed=embed)
 
 def setup(Bot):
-    Bot.add_cog(chelp(Bot))
+    Bot.add_cog(Help(Bot))
