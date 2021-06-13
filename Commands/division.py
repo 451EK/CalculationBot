@@ -16,7 +16,7 @@ class Division(commands.Cog):
             await ctx.message.delete()
             return
         else:
-            result = number1 // number2
+            result = number1 / number2
             embed = discord.Embed(title="**Result**",description=f"{number1} ÷ {number2} = {result}")
             await ctx.send(embed=embed)
 
