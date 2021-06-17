@@ -1,4 +1,4 @@
-<h1>[DENEME]Presentation Of The Bot</h1>
+<h1>Presentation Of The Bot</h1>
 
 <img src="https://i.imgur.com/iwEbpIw.png"/>
 
