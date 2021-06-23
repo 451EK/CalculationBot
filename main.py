@@ -8,7 +8,7 @@ TOKEN = open('token.txt','r').read()
 
 @Bot.event
 async def on_ready():
-    await Bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="-help | Version 0.0.1"))
+    await Bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="-help | Version 0.1"))
     print("Bot is online!")
 
 for filename in os.listdir("./Commands"):
