@@ -51,8 +51,8 @@ async def changeprefix(ctx,prefix):
     changedEmbed=discord.Embed(title=f"**Prefix succesfully changed to `{prefix}`**",colour=discord.Color.green())
     await ctx.send(embed=changedEmbed)
     
-for filename in os.listdir("./Commands"):
+for filename in os.listdir("./Cogs"):
     if filename.endswith(".py"):
-        Bot.load_extension(f"Commands.{filename[:-3]}")
+        Bot.load_extension(f"Cogs.{filename[:-3]}")
 
 Bot.run(TOKEN)
