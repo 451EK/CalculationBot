@@ -13,3 +13,5 @@
 • `changeprefix` command added.
 
 • The content of the `help` command updated.
+
+• Version 0.2 🎉
