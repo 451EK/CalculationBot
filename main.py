@@ -15,7 +15,7 @@ TOKEN = open('token.txt','r').read()
 
 @Bot.event
 async def on_ready():
-    await Bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="-help | Version 0.2"))
+    await Bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Operations | Version 0.2"))
     print("Bot is online!")
 
 @Bot.event
