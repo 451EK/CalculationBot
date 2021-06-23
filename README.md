@@ -31,6 +31,11 @@
 
 -Of course,the bot will down when you turn off your pc so you need to keep your bot 24/7 online.I do this with using my Tablet when I'm sleeping,just copy your repl.it link and open that in your device,That's all!
 
+<h1>Invite Link</h1>
+
+https://discord.com/oauth2/authorize?client_id=849705216244449300&scope=bot&permissions=379968
+
+
 <h2>Top.gg Link</h2>
 
 𝐒𝐨𝐨𝐧™
