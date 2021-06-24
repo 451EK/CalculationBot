@@ -12,7 +12,7 @@ class Credits(commands.Cog):
         embed.set_footer(text=f"Requested By {ctx.message.author}",icon_url=ctx.message.author.avatar_url)
         embed.set_thumbnail(url=self.Bot.user.avatar_url)
         embed.timestamp = datetime.datetime.utcnow()
-        await ctx.send(embed=embed
+        await ctx.send(embed=embed)
 
 def setup(Bot):
     Bot.add_cog(Credits(Bot))
