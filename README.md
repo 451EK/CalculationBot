@@ -44,4 +44,4 @@ https://discord.com/oauth2/authorize?client_id=849705216244449300&scope=bot&perm
 
 0.2
 
-<h3> Last Update : 23/06/2021 </h3>
+<h3> Last Update : 24/06/2021 </h3>
