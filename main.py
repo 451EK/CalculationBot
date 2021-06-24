@@ -39,7 +39,7 @@ async def on_guild_remove(guild):
         json.dump(prefixes,f,indent=4)
 
 @Bot.command()
-async def changeprefix(ctx,prefix):
+async def setprefix(ctx,prefix):
     with open("prefixes.json","r") as f:
         prefixes = json.load(f)
 
@@ -48,7 +48,7 @@ async def changeprefix(ctx,prefix):
     with open("prefixes.json","w") as f:
         json.dump(prefixes,f,indent=4)
 
-    changedEmbed=discord.Embed(title=f"**Prefix succesfully changed to `{prefix}`**",colour=discord.Color.green())
+    changedEmbed=discord.Embed(title=f"**Prefix successfully set to `{prefix}`**",colour=discord.Color.green())
     await ctx.send(embed=changedEmbed)
     
 for filename in os.listdir("./Cogs"):
