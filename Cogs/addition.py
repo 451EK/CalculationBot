@@ -12,7 +12,7 @@ class Addition(commands.Cog):
             await ctx.message.delete()
             return
         if number2 is None:
-            await ctx.send(f"{ctx.message.author.mention},makea sure you typed the command correctly!",delete_after=3)
+            await ctx.send(f"{ctx.message.author.mention},make sure you typed the command correctly!",delete_after=3)
             await ctx.message.delete()
             return
         else:
