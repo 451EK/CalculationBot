@@ -18,7 +18,7 @@ class Multiplication(commands.Cog):
         else:
             result = number1 * number2
             embed = discord.Embed(title="**Result**",description=f"{number1} × {number2} = {result}")
-            await ctx.send(embed=embed
+            await ctx.send(embed=embed)
 
 def setup(Bot):
     Bot.add_cog(Multiplication(Bot))
