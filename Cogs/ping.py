@@ -19,7 +19,7 @@ class Ping(commands.Cog):
         elif round(self.Bot.latency * 1000) < 50:
             GREENembed=discord.Embed(title="**Pong! 🏓**",description=f"**Ping {round(self.Bot.latency * 1000)} ms**",colour=discord.Color.green(),timestamp=datetime.datetime.utcnow())
             GREENembed.set_footer(text="Calculation#1494",icon_url=self.Bot.user.avatar_url)
-            await ctx.send(embed=GREENembed
+            await ctx.send(embed=GREENembed)
     
 def setup(Bot):
     Bot.add_cog(Ping(Bot))
