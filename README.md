@@ -38,7 +38,7 @@ https://discord.com/oauth2/authorize?client_id=849705216244449300&scope=bot&perm
 
 <h2>Top.gg Link</h2>
 
-𝐒𝐨𝐨𝐧™
+https://top.gg/bot/849705216244449300
 
 <h2> Current Bot Version </h2>
 
