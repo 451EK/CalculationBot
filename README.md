@@ -1,6 +1,6 @@
 <h1>Presentation Of The Bot</h1>
 
-<img src="https://i.imgur.com/Y4qJEC7.png"/>
+<img src="https://i.imgur.com/Yrq3vnY.png" width=150/>
 
 -Hello,I made a Discord Bot for your basic math operations.
 
