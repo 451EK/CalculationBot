@@ -50,4 +50,4 @@ https://top.gg/bot/849705216244449300
 
 0.2
 
-<h3> Last Update : 30/06/2021 </h3>
+<h2> Last Update : 30/06/2021 </h2>
