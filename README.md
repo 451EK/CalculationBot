@@ -1,6 +1,12 @@
-<h1>Presentation Of The Bot</h1>
+![discord.py Version](https://img.shields.io/badge/lib-discord.py%201.7.0-blue)
+![Language](https://img.shields.io/badge/lang-Python%203.9-green)
 
-<img src="https://i.imgur.com/Yrq3vnY.png" width=150/>
+<br />
+<p align="center">
+<img src="https://i.imgur.com/Yrq3vnY.png" alt="Logo"width=200 height=200/>
+  
+ <h1 align="center">Calculation Bot</h1>
+
 
 -Hello,I made a Discord Bot for your basic math operations.
 
@@ -44,4 +50,4 @@ https://top.gg/bot/849705216244449300
 
 0.2
 
-<h3> Last Update : 24/06/2021 </h3>
+<h3> Last Update : 30/06/2021 </h3>
