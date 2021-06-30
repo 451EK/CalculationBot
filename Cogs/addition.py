@@ -8,11 +8,11 @@ class Addition(commands.Cog):
     @commands.command()
     async def add(self,ctx,number1 : int = None,number2 : int = None):
         if number1 is None:
-            await ctx.send(f"{ctx.message.author.mention},make sure you typed the command correctly!",delete_after=3)
+            await ctx.send(f"{ctx.message.author.mention},make sure you typed the command correctly!\n**Example Usage** : add <number1> <number2>",delete_after=3)
             await ctx.message.delete()
             return
         if number2 is None:
-            await ctx.send(f"{ctx.message.author.mention},make sure you typed the command correctly!",delete_after=3)
+            await ctx.send(f"{ctx.message.author.mention},make sure you typed the command correctly!\n**Example Usage** : add <number1> <number2>",delete_after=3)
             await ctx.message.delete()
             return
         else:
