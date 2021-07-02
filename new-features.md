@@ -15,3 +15,18 @@
 • The content of the `help` command updated.
 
 • Version 0.2 🎉
+
+**30/06/2021**
+
+• Avatar changed.
+
+• `help` command updated.
+
+• Bugs fixed.
+
+• Github page updated.
+
+• Top.gg link is now available.
+
+• Website is now available(Beta).
+  http://calculationbot.cf/
