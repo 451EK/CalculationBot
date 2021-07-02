@@ -46,6 +46,10 @@ https://discord.com/oauth2/authorize?client_id=849705216244449300&scope=bot&perm
 
 https://top.gg/bot/849705216244449300
 
+<h2> Website Link </h2>
+
+http://calculationbot.cf/
+
 <h2> Current Bot Version </h2>
 
 0.2
