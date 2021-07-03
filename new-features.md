@@ -30,3 +30,17 @@
 
 • Website is now available(Beta).
   http://calculationbot.cf/
+  
+  **03/07/2021**
+
+• `sqrt` command added.
+
+• `factorial` command added.
+
+• `help` command updated.
+
+• `credits` command changed with `info`.
+
+• Known bugs fixed.
+
+• Version 0.3 🎉
