@@ -1,7 +1,9 @@
+import asyncio
 import discord
 from discord.ext import commands
 import os
 import json
+import asyncio
 
 def getprefixes(Bot,message):
     with open("prefixes.json","r") as f:
@@ -10,12 +12,19 @@ def getprefixes(Bot,message):
     return prefixes[str(message.guild.id)]
 
 intents = discord.Intents().all()
-Bot = commands.Bot(command_prefix=getprefixes,intents=intents,help_command=None)
+Bot = commands.Bot(command_prefix=getprefixes,intents=intents,help_command=None,case_insensitive=True)
 TOKEN = open('token.txt','r').read()
+
+async def status_change():
+    while True:
+        await Bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Math Operations"))
+        await asyncio.sleep(25)
+        await Bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Version 0.3"))
+        await asyncio.sleep(25)
 
 @Bot.event
 async def on_ready():
-    await Bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Operations | Version 0.2"))
+    Bot.loop.create_task(status_change())
     print("Bot is online!")
 
 @Bot.event
