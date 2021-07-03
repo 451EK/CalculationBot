@@ -39,7 +39,9 @@
 
 • `help` command updated.
 
-• `credits` command changed with `info`.
+• `credits` command removed.
+
+• `info` command added.
 
 • Known bugs fixed.
 
