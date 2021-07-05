@@ -18,7 +18,7 @@ class Info(commands.Cog):
         embed.add_field(name="Users",value=ctx.guild.member_count)
         embed.add_field(name="Ping",value=f"{round(self.Bot.latency * 1000)}ms")
         embed.add_field(name="Links",value="[Website](http://calculationbot.cf) | [Github Repository](https://github.com/451EK/CalculationBot) | [Vote](https://top.gg/bot/849705216244449300/vote)",inline=False)
-        embed.timestamp = datetime.datetime.utcnow(
+        embed.timestamp = datetime.datetime.utcnow()
         await ctx.send(embed=embed)
 
 def setup(Bot):
