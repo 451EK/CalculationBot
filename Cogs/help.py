@@ -8,7 +8,7 @@ class Help(commands.Cog):
     @commands.command()
     async def help(self,ctx,command = None):
         if command == None:
-            embed=discord.Embed(title="**Commands (8)**",description="➜ **Moderation**\n`setprefix`\n➜ **Info**\n`help`,`info`,`ping`\n ➜**Calculation**\n `add`,`sub`,`mul`,`div`,`sqrt`,`factorial`",colour=discord.Color.blue())
+            embed=discord.Embed(title="**Commands (10)**",description="➜ **Moderation**\n`setprefix`\n➜ **Info**\n`help`,`info`,`ping`\n ➜**Calculation**\n `add`,`sub`,`mul`,`div`,`sqrt`,`factorial`",colour=discord.Color.blue())
             await ctx.send(embed=embed)
         elif command == "setprefix".lower():
             SETPREFIXembed=discord.Embed(title="**Command 'setprefix'**",description="\n• **Usage** : `-setprefix <prefix>`\n• **Description** : Changes the prefix in server.\n• **Note** : Administrator permission is required to use this command.",colour=discord.Color.dark_theme())
