@@ -31,7 +31,7 @@
 • Website is now available(Beta).
   http://calculationbot.cf/
   
-  **03/07/2021**
+**03/07/2021**
 
 • `sqrt` command added.
 
@@ -46,3 +46,18 @@
 • Known bugs fixed.
 
 • Version 0.3 🎉
+
+
+**10/07/2021**
+
+• `time` command added.
+
+• `remindme` command added.
+
+• `genpassw` command added.
+
+• `random` command added.
+
+• `help` command updated.
+
+• Known bugs fixed.
