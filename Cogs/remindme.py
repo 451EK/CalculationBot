@@ -41,4 +41,4 @@ class Remindme(commands.Cog):
         await ctx.send(embed=embed)
 
 def setup(Bot):
-    Bot.add_cog(Remindme(Bot))
+    Bot.add_cog(Remindme(Bot)
