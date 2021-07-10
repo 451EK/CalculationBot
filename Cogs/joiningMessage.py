@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands
 import datetime
-from discord.utils import find
 
 class joiningMessage(commands.Cog):
     def __init__(self,Bot):
