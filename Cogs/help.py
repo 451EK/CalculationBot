@@ -8,7 +8,7 @@ class Help(commands.Cog):
     @commands.command()
     async def help(self,ctx,command = None):
         if command == None:
-            embed=discord.Embed(title="**Commands (14)**",description="➜ **Moderation**\n`setprefix`\n➜ **Info**\n`help`,`info`,`ping`\n➜**Calculation**\n `add`,`sub`,`mul`,`div`,`sqrt`,`factorial`,`random`\n➜ **More**\n`date`,`genpassw`,`remindme`",colour=discord.Color.blue())
+            embed=discord.Embed(title="**Commands (14)**",description="➜ **Moderation**\n`setprefix`\n➜ **Info**\n`help`,`info`,`ping`\n➜**Calculation**\n `add`,`sub`,`mul`,`div`,`sqrt`,`factorial`,`random`\n➜ **More**\n`time`,`genpassw`,`remindme`",colour=discord.Color.blue())
             await ctx.send(embed=embed)
         elif command == "setprefix".lower():
             SETPREFIXembed=discord.Embed(title="**Command 'setprefix'**",description="\n• **Usage** : `-setprefix <prefix>`\n• **Description** : Changes the prefix in server.\n• **Note** : Administrator permission is required to use this command.",colour=discord.Color.dark_theme())
@@ -70,11 +70,11 @@ class Help(commands.Cog):
         elif command == "factorial".upper():
             FACTORIALembed=discord.Embed(title="**Command 'factorial'**",description="\n• **Usage** : `-factorial <number>`\n• **Description** : Shows the factorial of the entered number.\n• **Note** : Entered number must be integer and length must be less than four.",colour=discord.Color.dark_theme())
             await ctx.send(embed=FACTORIALembed)
-        elif command == "date".lower():
-            DATEembed=discord.Embed(title="**Command 'date'**",description="\n• **Usage** : `-date`\n• **Description** : Shows the date.",colour=discord.Color.dark_theme())
+        elif command == "time".lower():
+            DATEembed=discord.Embed(title="**Command 'time'**",description="\n• **Usage** : `-time`\n• **Description** : Displays the time in UTC.",colour=discord.Color.dark_theme())
             await ctx.send(embed=DATEembed)
-        elif command == "date".upper():
-            DATEembed=discord.Embed(title="**Command 'date'**",description="\n• **Usage** : `-date`\n• **Description** : Shows the date.",colour=discord.Color.dark_theme())
+        elif command == "time".upper():
+            DATEembed=discord.Embed(title="**Command 'time'**",description="\n• **Usage** : `-time`\n• **Description** : Displays the time in UTC.",colour=discord.Color.dark_theme())
             await ctx.send(embed=DATEembed)
         elif command == "genpassw".lower():
             PASSWembed=discord.Embed(title="**Command 'genpassw'**",description="\n• **Usage** : `-genpassw <password_length>`\n• **Description** : Generates a password of entered length.")
