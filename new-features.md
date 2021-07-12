@@ -50,7 +50,7 @@
 
 **10/07/2021**
 
-• `date` command added.
+• `time` command added.
 
 • `remindme` command added.
 
