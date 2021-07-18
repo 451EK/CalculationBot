@@ -21,7 +21,7 @@ async def status_change():
         await asyncio.sleep(25)
         await Bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Version 0.3"))
         await asyncio.sleep(25)
-        await Bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=f"-help"))
+        await Bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="-help"))
         await asyncio.sleep(25)
 
 @Bot.event
