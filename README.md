@@ -3,9 +3,9 @@
 
 <br />
 <p align="center">
-<img src="https://i.imgur.com/Yrq3vnY.png" alt="Logo"width=200 height=200/>
+
   
- <h1 align="center">[DELETED]Calculation Bot</h1>
+ <h1 align="center">Calculator</h1>
 
 
 -Hello,I made a Discord Bot for your basic math operations.
@@ -39,15 +39,7 @@
 
 <h1>Invite Link</h1>
 
-https://discord.com/oauth2/authorize?client_id=849705216244449300&scope=bot&permissions=379968
+https://discord.com/oauth2/authorize?client_id=869500014899122246&scope=bot&permissions=67488833
 
 
-<h2>Top.gg Link</h2>
-
-https://top.gg/bot/849705216244449300
-
-<h2> Current Bot Version </h2>
-
-0.3
-
-<h2> Last Update : 18/07/2021 </h2>
+<h2> Last Update : 27/07/2021 </h2>
