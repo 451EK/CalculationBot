@@ -5,7 +5,7 @@
 <p align="center">
 <img src="https://i.imgur.com/Yrq3vnY.png" alt="Logo"width=200 height=200/>
   
- <h1 align="center">Calculation Bot</h1>
+ <h1 align="center">[DELETED]Calculation Bot</h1>
 
 
 -Hello,I made a Discord Bot for your basic math operations.
