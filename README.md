@@ -14,7 +14,7 @@
 
 -New features will come with updates,take a look to <a href="https://github.com/451EK/CalculationBot/blob/main/current--version">current--version</a> file to see current bot version.  
 
--You can come to our <a href="https://discord.gg/YftvCvgPdy">Support Server</a> to give suggestion or get support and information.
+-You can come to our <a href="https://discord.gg/YftvCvgPdy">Support Server & Community</a> to give suggestion or get support and information.
 
 
 <h2>Requirements</h2>
