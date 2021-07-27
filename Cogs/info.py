@@ -16,7 +16,7 @@ class Info(commands.Cog):
         embed.add_field(name="Servers",value=len(self.Bot.guilds))
         embed.add_field(name="Users",value=ctx.guild.member_count)
         embed.add_field(name="Ping",value=f"{round(self.Bot.latency * 1000)}ms")
-        embed.add_field(name="Links",value="[Repository](https://github.com/451EK/Calculator)")
+        embed.add_field(name="Links",value="[Repository](https://github.com/451EK/Calculator)",inline=False)
         embed.timestamp = datetime.datetime.utcnow()
         await ctx.send(embed=embed)
 
