@@ -3,9 +3,9 @@
 
 <br />
 <p align="center">
-
+ <img src="https://i.imgur.com/f6fZjMT.png" width="190" height="190">
   
- <h1 align="center">Calculator</h1>
+ <h1 align="center">Calculator Bot</h1>
 
 
 -Hello,I made a Discord Bot for your basic math operations.
