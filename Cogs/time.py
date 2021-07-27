@@ -11,7 +11,7 @@ class Time(commands.Cog):
         now = datetime.datetime.now()
         timeInfo = now.strftime("%A, %B %d,%Y")
         time = now.strftime("%I:%M %p")
-        TIMEembed=discord.Embed(title="**Time**",description=f"{timeInfo}\n{time}",colour=discord.Color.dark_green())
+        TIMEembed=discord.Embed(title="**Time**",description=f"{timeInfo}\n{time} UTC",colour=discord.Color.from_rgb(0,255,148))
         await ctx.send(embed=TIMEembed)
 
 def setup(Bot):
