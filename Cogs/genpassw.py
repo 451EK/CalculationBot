@@ -16,8 +16,8 @@ class GeneratePassword(commands.Cog):
             await ctx.message.delete()
             return
         elif passwlength > 300:
-            embed=discord.Embed(title="**Error**",description="**Password length can't be longer than 300!**",colour=discord.Color.red())
-            await ctx.send(embed=embed)
+            embed=discord.Embed(title="**Error**",description=f"**{ctx.message.author.mention},password length can't be longer than 300!**",colour=discord.Color.red())
+            await ctx.send(embed=embed,delete_after=7)
             await ctx.message.delete()
             return
         else:
