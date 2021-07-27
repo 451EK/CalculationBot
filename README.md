@@ -3,7 +3,7 @@
 
 <br />
 <p align="center">
- <img src="https://i.imgur.com/f6fZjMT.png" width="190" height="190">
+ <img src="https://i.imgur.com/nolWGg9.png" width="190" height="190">
   
  <h1 align="center">Calculator Bot</h1>
 
