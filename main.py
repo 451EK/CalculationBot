@@ -17,9 +17,9 @@ TOKEN = open('token.txt','r').read()
 
 async def status_change():
     while True:
-        await Bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=f"-help"))
+        await Bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=f"-help ⚒️"))
         await asyncio.sleep(25)
-        await Bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Math Operations"))
+        await Bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="📝 Math Operations"))
         await asyncio.sleep(25)
 
 @Bot.event
