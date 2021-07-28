@@ -42,4 +42,4 @@
 https://discord.com/oauth2/authorize?client_id=869500014899122246&scope=bot&permissions=67488833
 
 
-<h2> Last Edited 27/07/2021 </h2>
+<h2> Last Edited 28/07/2021 </h2>
