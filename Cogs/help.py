@@ -8,7 +8,7 @@ class Help(commands.Cog):
     @commands.command()
     async def help(self,ctx,command = None):
         if command == None:
-            embed=discord.Embed(title="**Commands (14)**",description="➜ **Moderation**\n`setprefix`\n➜ **Info**\n`help`,`info`,`ping`\n➜**Calculation**\n `add`,`sub`,`mul`,`div`,`sqrt`,`factorial`,`random`\n➜ **More**\n`time`,`genpassw`,`remindme`",colour=discord.Color.from_rgb(0,255,148))
+            embed=discord.Embed(title="**Commands (14)**",description="➜ **Moderation**\n`setprefix`\n➜ **Utility**\n`bugreport`\n➜ **Info**\n`help`,`info`,`ping`\n➜**Calculation**\n `add`,`sub`,`mul`,`div`,`sqrt`,`factorial`,`random`,`length`\n➜ **More**\n`time`,`genpassw`,`remindme`",colour=discord.Color.from_rgb(0,255,148))
             await ctx.send(embed=embed)
         elif command == "setprefix".lower():
             SETPREFIXembed=discord.Embed(title="**Command 'setprefix'**",description="\n• **Usage** : `-setprefix <prefix>`\n• **Description** : Changes the prefix in server.\n• **Note** : Administrator permission is required to use this command.",colour=discord.Color.dark_theme())
@@ -94,6 +94,18 @@ class Help(commands.Cog):
         elif command == "remindme".upper():
             REMINDMEembed=discord.Embed(title="**Command 'remindme'**",description="\n• **Usage** : `-remindme <time/s/m/h/d> <reminder-text>`\n• **Description** : Sets a reminder for specified time.\n• **Note : Time must be at least 5 minutes and at most 14 days/2 weeks.**")
             await ctx.send(embed=REMINDMEembed)
+        elif command == "length".lower():
+            LENGTHembed =discord.Embed(title="**Command 'length'**",description="\n• **Usage** : `-length <message>`\n• **Description** : Shows the length of entered message.\n• **Note : Spaces don't count.**")
+            await ctx.send(embed=LENGTHembed)
+        elif command == "length".upper():
+            LENGTHembed =discord.Embed(title="**Command 'length'**",description="\n• **Usage** : `-length <message>`\n• **Description** : Shows the length of entered message.\n• **Note : Spaces don't count.**")
+            await ctx.send(embed=LENGTHembed)
+        elif command == "bugreport".lower():
+            BUGembed =discord.Embed(title="**Command 'bugreport'**",description="\n• **Usage** : `-bugreport <bug_message>`\n• **Description** : Sends a bug report message to developer.\n• **Note : Please do not abuse this command.**")
+            await ctx.send(embed=BUGembed)
+        elif command == "bugreport".upper():
+            BUGembed =discord.Embed(title="**Command 'bugreport'**",description="\n• **Usage** : `-bugreport <bug_message>`\n• **Description** : Sends a bug report message to developer.\n• **Note : Please do not abuse this command.**")
+            await ctx.send(embed=BUGembed)
         else:
             UNKNOWNembed=discord.Embed(title="**Unknown Command**",description="Use the `-help` command to see all commands.",colour=discord.Color.red())
             reaction = "❌"
