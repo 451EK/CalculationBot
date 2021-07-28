@@ -77,10 +77,10 @@ class Help(commands.Cog):
             DATEembed=discord.Embed(title="**Command 'time'**",description="\n• **Usage** : `-time`\n• **Description** : Displays the time in UTC.",colour=discord.Color.dark_theme())
             await ctx.send(embed=DATEembed)
         elif command == "genpassw".lower():
-            PASSWembed=discord.Embed(title="**Command 'genpassw'**",description="\n• **Usage** : `-genpassw <password_length>`\n• **Description** : Generates a password of entered length.\n• **Note : Password length must be integer and must not be longer than 300.**")
+            PASSWembed=discord.Embed(title="**Command 'genpassw'**",description="\n• **Usage** : `-genpassw`\n• **Description** : Generates a random password.")
             await ctx.send(embed=PASSWembed)
         elif command == "genpassw".upper():
-            PASSWembed=discord.Embed(title="**Command 'genpassw'**",description="\n• **Usage** : `-genpassw <password_length>`\n• **Description** : Generates a password of entered length.\n• **Note : Password length must be integer and must not be longer than 300.**")
+            PASSWembed=discord.Embed(title="**Command 'genpassw'**",description="\n• **Usage** : `-genpassw`\n• **Description** : Generates a random password.")
             await ctx.send(embed=PASSWembed)
         elif command == "random".lower():
             RANDembed=discord.Embed(title="**Command 'random'**",description="\n• **Usage** : `-random <number1> <number2>`\n• **Description** : Generates a random number between given numbers.")
