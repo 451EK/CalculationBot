@@ -107,10 +107,10 @@ class Help(commands.Cog):
             BUGembed =discord.Embed(title="**Command 'bugreport'**",description="\n• **Usage** : `-bugreport <bug_message>`\n• **Description** : Sends a bug report message to developer.\n• **Note** : Please do not abuse this command.")
             await ctx.send(embed=BUGembed)
         elif command == "calculator".lower():
-            CALCULATORembed =discord.Embed(title="**Command 'calculator'**",description="\n• **Usage** : `-calculator`\n• **Description** : Shows a virtual calculator.")
+            CALCULATORembed =discord.Embed(title="**Command 'calculator'**",description="\n• **Usage** : `-calculator`\n• **Description** : Displays a virtual calculator.")
             await ctx.send(embed=CALCULATORembed)
         elif command == "calculator".upper():
-            CALCULATORembed =discord.Embed(title="**Command 'calculator'**",description="\n• **Usage** : `-calculator`\n• **Description** : Shows a virtual calculator.")
+            CALCULATORembed =discord.Embed(title="**Command 'calculator'**",description="\n• **Usage** : `-calculator`\n• **Description** : Displays a virtual calculator.")
             await ctx.send(embed=CALCULATORembed)
         else:
             UNKNOWNembed=discord.Embed(title="**Unknown Command**",description="Use the `-help` command to see all commands.",colour=discord.Color.red())
