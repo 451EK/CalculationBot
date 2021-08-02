@@ -1,15 +1,132 @@
+import datetime
 import discord
 from discord.ext import commands
+from discord_components import *
+import json
+import os
 
 class Help(commands.Cog):
     def __init__(self,Bot):
         self.Bot = Bot
 
+    @commands.Cog.listener()
+    async def on_ready(self):
+        DiscordComponents(self.Bot)
+
     @commands.command()
     async def help(self,ctx,command = None):
         if command == None:
-            embed=discord.Embed(title="**Commands (17)**",description="➜ **Moderation**\n`setprefix`\n➜ **Utility**\n`bugreport`\n➜ **Info**\n`help`,`info`,`ping`\n➜**Calculation**\n`calculator`,`add`,`sub`,`mul`,`div`,`sqrt`,`factorial`,`random`,`length`\n➜ **More**\n`time`,`genpassw`,`remindme`",colour=discord.Color.from_rgb(0,255,148))
-            await ctx.send(embed=embed)
+            await ctx.send("**Help Menu**",
+            components=
+            [Select(placeholder="Choose a help option",
+                                options=[
+                                    SelectOption(
+                                        label="General",
+                                        value="general",
+                                        description="General Informations",
+                                        emoji="ℹ️"
+                                    ),
+                                    SelectOption(
+                                        label="Moderation",
+                                        value="moderation",
+                                        description="Moderation Menu",
+                                        emoji="⚙️"
+                                    ),
+                                    SelectOption(
+                                        label="Utility",
+                                        value="utility",
+                                        description="Utility Menu",
+                                        emoji="⚒️"
+                                    ),
+                                    SelectOption(
+                                        label="Info",
+                                        value="info",
+                                        description="Info Menu",
+                                        emoji="📋"
+                                    ),
+                                    SelectOption(
+                                        label="Calculation",
+                                        value="calculation",
+                                        description="Calculator Menu",
+                                        emoji="📝"
+                                    ),
+                                    SelectOption(
+                                        label="Fun",
+                                        value="fun",
+                                        description="Fun Menu",
+                                        emoji="🎉"
+                                    ),
+                                    SelectOption(
+                                        label="More",
+                                        value="more",
+                                        description="More Commands",
+                                        emoji="📚"
+                                    ),
+                                ])]
+                                ) 
+
+            e0 = discord.Embed(title="**General Informations**",description=f"**Commands(18)**\nAll commands must start with a prefix.\nDefault prefix is `-`.\n\nTo view commands via category,select a category in the select menu below.\nTo view more information on a certain command,use `help <command>`.",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
+            e1 = discord.Embed(title="➜ **Moderation**", description="\n`setprefix`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
+            e2 = discord.Embed(title="➜ **Utility**", description="\n`bugreport`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
+            e3 = discord.Embed(title="➜ **Info**", description="\n`help`,`info`,`ping`,`time`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
+            e4 = discord.Embed(title="➜ **Calculation**", description="\n`calculator`,`add`,`sub`,`mul`,`div`,`sqrt`,`factorial`,`random`,`length`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
+            e5 = discord.Embed(title="➜ **Fun**", description="\n`quiz`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
+            e6 = discord.Embed(title="➜ **More**", description="\n`genpassw`,`remindme`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
+
+            while True:
+                try:
+                    event = await self.Bot.wait_for("select_option", check=None)
+
+                    label = event.component[0].label
+
+                    if label == "General":
+                        await event.respond(
+                            type=InteractionType.ChannelMessageWithSource,
+                            ephemeral=True,
+                            embed=e0
+                        )
+
+                    elif label == "Moderation":
+                        await event.respond(
+                            type=InteractionType.ChannelMessageWithSource,
+                            ephemeral=True,
+                            embed=e1
+                        )
+                    elif label == "Utility":
+                        await event.respond(
+                            type=InteractionType.ChannelMessageWithSource,
+                            ephemeral=True,
+                            embed=e2
+                        )
+                    elif label == "Info":
+                        await event.respond(
+                            type=InteractionType.ChannelMessageWithSource,
+                            ephemeral=True,
+                            embed=e3
+                        )
+                    elif label == "Calculation":
+                        await event.respond(
+                            type=InteractionType.ChannelMessageWithSource,
+                            ephemeral=True,
+                            embed=e4
+                        )
+                    elif label == "Fun":
+                        await event.respond(
+                            type=InteractionType.ChannelMessageWithSource,
+                            ephemeral=True,
+                            embed=e5
+                        )
+                    elif label == "More":
+                        await event.respond(
+                            type=InteractionType.ChannelMessageWithSource,
+                            ephemeral=True,
+                            embed=e6
+                        )
+
+
+                except discord.NotFound:
+                    print("discord not found error")
+
         elif command == "setprefix".lower():
             SETPREFIXembed=discord.Embed(title="**Command 'setprefix'**",description="\n• **Usage** : `-setprefix <prefix>`\n• **Description** : Changes the prefix in server.\n• **Note** : Administrator permission is required to use this command.",colour=discord.Color.dark_theme())
             await ctx.send(embed=SETPREFIXembed)
@@ -112,11 +229,18 @@ class Help(commands.Cog):
         elif command == "calculator".upper():
             CALCULATORembed =discord.Embed(title="**Command 'calculator'**",description="\n• **Usage** : `-calculator`\n• **Description** : Displays a virtual calculator.")
             await ctx.send(embed=CALCULATORembed)
+        elif command == "quiz".lower():
+            QUIZembed =discord.Embed(title="**Command 'quiz'**",description="\n• **Usage** : `-quiz`\n• **Description** : Asks a random question.")
+            await ctx.send(embed=QUIZembed)
+        elif command == "quiz".upper():
+            QUIZembed =discord.Embed(title="**Command 'quiz'**",description="\n• **Usage** : `-quiz`\n• **Description** : Asks a random question.")
+            await ctx.send(embed=QUIZembed)
         else:
             UNKNOWNembed=discord.Embed(title="**Unknown Command**",description="Use the `-help` command to see all commands.",colour=discord.Color.red())
             reaction = "❌"
             await ctx.message.add_reaction(reaction)
             await ctx.send(embed=UNKNOWNembed)
+        
 
 def setup(Bot):
     Bot.add_cog(Help(Bot))
