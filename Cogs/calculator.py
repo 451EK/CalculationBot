@@ -53,7 +53,7 @@ class Calculator(commands.Cog):
             Button(style=ButtonStyle.green, label='=')
         ],
     ]
-        m = await ctx.send(content='**Loading Calculator <a:an_loading:867491877811781683>**')
+        m = await ctx.send(content='**Loading Calculator <a:an_loading:873267683179765781>**')
         expression = 'None'
         delta = datetime.datetime.utcnow() + datetime.timedelta(minutes=5)
         e = discord.Embed(title=f'{ctx.author.name}\'s Calculator | {ctx.author.id}', description=expression,
