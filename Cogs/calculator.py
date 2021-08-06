@@ -56,7 +56,7 @@ class Calculator(commands.Cog):
         m = await ctx.send(content='**Loading Calculator <a:an_loading:873267683179765781>**')
         expression = 'None'
         delta = datetime.datetime.utcnow() + datetime.timedelta(minutes=5)
-        e = discord.Embed(title=f'{ctx.author.name}\'s Calculator | {ctx.author.id}', description=expression,
+        e = discord.Embed(title=f'{ctx.author.name}\'s Calculator | {ctx.author.id}', description=expression,colour=discord.Color.from_rgb(0,255,148),
                             timestamp=delta)
         await m.edit(components=buttons, embed=e)
         while m.created_at < delta:
@@ -77,7 +77,7 @@ class Calculator(commands.Cog):
                     expression = calculate(expression)
                 else:
                     expression += res.component.label
-                f = discord.Embed(title=f'{res.author.name}\'s Calculator|{res.author.id}', description=expression,
+                f = discord.Embed(title=f'{res.author.name}\'s Calculator|{res.author.id}', description=expression,colour=discord.Color.from_rgb(0,255,148),
                                     timestamp=delta)
                 await res.respond(content='', embed=f, components=buttons, type=7)
 
