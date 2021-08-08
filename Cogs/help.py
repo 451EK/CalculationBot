@@ -57,6 +57,12 @@ class Help(commands.Cog):
                                         emoji="🎉"
                                     ),
                                     SelectOption(
+                                        label="Images",
+                                        value="image",
+                                        description="Image Commands",
+                                        emoji="🗳️"
+                                    ),
+                                    SelectOption(
                                         label="More",
                                         value="more",
                                         description="More Commands",
@@ -71,7 +77,8 @@ class Help(commands.Cog):
             e3 = discord.Embed(title="➜ **Info**", description="\n`help`,`info`,`ping`,`time`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
             e4 = discord.Embed(title="➜ **Calculation**", description="\n`calculator`,`add`,`sub`,`mul`,`div`,`sqrt`,`factorial`,`random`,`length`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
             e5 = discord.Embed(title="➜ **Fun**", description="\n`quiz`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
-            e6 = discord.Embed(title="➜ **More**", description="\n`genpassw`,`remindme`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
+            e6 = discord.Embed(title="➜ **Images**", description="\n`nobel`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
+            e7 = discord.Embed(title="➜ **More**", description="\n`genpassw`,`remindme`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
 
             while True:
                 try:
@@ -116,11 +123,17 @@ class Help(commands.Cog):
                             ephemeral=True,
                             embed=e5
                         )
-                    elif label == "More":
+                    elif label == "Images":
                         await event.respond(
                             type=InteractionType.ChannelMessageWithSource,
                             ephemeral=True,
                             embed=e6
+                        )
+                    elif label == "More":
+                        await event.respond(
+                            type=InteractionType.ChannelMessageWithSource,
+                            ephemeral=True,
+                            embed=e7
                         )
 
 
@@ -235,6 +248,12 @@ class Help(commands.Cog):
         elif command == "quiz".upper():
             QUIZembed =discord.Embed(title="**Command 'quiz'**",description="\n• **Usage** : `-quiz`\n• **Description** : Asks a random question.")
             await ctx.send(embed=QUIZembed)
+        elif command == "nobel".lower():
+            NOBELembed =discord.Embed(title="**Command 'nobel'**",description="\n• **Usage** : `-nobel`\n• **Description** : Shows a nobel news.")
+            await ctx.send(embed=NOBELembed)
+        elif command == "nobel".upper():
+            NOBELembed =discord.Embed(title="**Command 'nobel'**",description="\n• **Usage** : `-nobel`\n• **Description** : Shows a nobel news.")
+            await ctx.send(embed=NOBELembed)
         else:
             UNKNOWNembed=discord.Embed(title="**Unknown Command**",description="Use the `-help` command to see all commands.",colour=discord.Color.red())
             reaction = "❌"
