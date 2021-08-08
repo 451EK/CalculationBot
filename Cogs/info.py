@@ -26,7 +26,7 @@ class Info(commands.Cog):
         embed.add_field(name="Servers",value=len(self.Bot.guilds))
         embed.add_field(name="Users",value=total_members)
         embed.add_field(name="Ping",value=f"{round(self.Bot.latency * 1000)}ms")
-        embed.add_field(name="Links",value="[Github Repository](https://github.com/451EK/Calculator) | [Invite Link](https://discord.com/oauth2/authorize?client_id=869500014899122246&scope=bot&permissions=67488833)",inline=False)
+        embed.add_field(name="Links",value="[Github Repository](https://github.com/451EK/Calculator) | [Invite](https://discord.com/oauth2/authorize?client_id=869500014899122246&scope=bot&permissions=201706561) | [Vote](https://top.gg/bot/869500014899122246/vote)",inline=False)
         embed.timestamp = datetime.utcnow()
         await ctx.send(embed=embed)
 
