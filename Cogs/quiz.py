@@ -1,8 +1,6 @@
 import discord
 from discord.ext import commands
-import math
 from random import *
-import datetime
 
 class Quiz(commands.Cog):
     def __init__(self,Bot):
@@ -40,11 +38,11 @@ class Quiz(commands.Cog):
             if msg.content == answerr:
                 embed = discord.Embed(title="Correct Answer!",colour=discord.Color.from_rgb(0,255,148))
                 embed.set_footer(text=f"Good one {ctx.message.author.display_name}!",icon_url=ctx.message.author.avatar_url)
-                await ctx.send(embed=embed)
+                await msg.reply(embed=embed)
             else:
                 embed = discord.Embed(title="Wrong Answer!",description=f"{ctx.message.author.mention},\nCorrect answer was `{answerr}`.",colour=discord.Color.red())
                 embed.set_footer(text=f"Maybe next time {ctx.message.author.display_name}!",icon_url=ctx.message.author.avatar_url)
-                await ctx.send(embed=embed)
+                await msg.reply(embed=embed)
         elif type == 3:
             number1 = randint(1,70)
             number2 = randint(1,50)
@@ -56,11 +54,11 @@ class Quiz(commands.Cog):
             if msg.content == answerr:
                 embed = discord.Embed(title="Correct Answer!",colour=discord.Color.from_rgb(0,255,148))
                 embed.set_footer(text=f"Good one {ctx.message.author.display_name}!",icon_url=ctx.message.author.avatar_url)
-                await ctx.send(embed=embed)
+                await msg.reply(embed=embed)
             else:
                 embed = discord.Embed(title="Wrong Answer!",description=f"{ctx.message.author.mention},\nCorrect answer was `{answerr}`.",colour=discord.Color.red())
                 embed.set_footer(text=f"Maybe next time {ctx.message.author.display_name}!",icon_url=ctx.message.author.avatar_url)
-                await ctx.send(embed=embed)
+                await msg.reply(embed=embed)
         elif type == 4:
             number1 = randint(1,70)
             number2 = randint(1,20)
@@ -74,15 +72,15 @@ class Quiz(commands.Cog):
             if msg.content == answerr:
                 embed = discord.Embed(title="Correct Answer!",colour=discord.Color.from_rgb(0,255,148))
                 embed.set_footer(text=f"Good one {ctx.message.author.display_name}!",icon_url=ctx.message.author.avatar_url)
-                await ctx.send(embed=embed)
+                await msg.reply(embed=embed)
             elif msg.content == answ:
                 embed = discord.Embed(title="Correct Answer!",colour=discord.Color.from_rgb(0,255,148))
                 embed.set_footer(text=f"Good one {ctx.message.author.display_name}!",icon_url=ctx.message.author.avatar_url)
-                await ctx.send(embed=embed)
+                await msg.reply(embed=embed)
             else:
                 embed = discord.Embed(title="Wrong Answer!",description=f"{ctx.message.author.mention},\nCorrect answer was `{answerr}`.",colour=discord.Color.red())
                 embed.set_footer(text=f"Maybe next time {ctx.message.author.display_name}!",icon_url=ctx.message.author.avatar_url)
-                await ctx.send(embed=embed)
+                await msg.reply(embed=embed)
 
 
 def setup(Bot):
