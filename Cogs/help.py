@@ -2,8 +2,6 @@ import datetime
 import discord
 from discord.ext import commands
 from discord_components import *
-import json
-import os
 
 class Help(commands.Cog):
     def __init__(self,Bot):
@@ -66,12 +64,12 @@ class Help(commands.Cog):
                                 ) 
 
             e0 = discord.Embed(title="**General Informations**",description=f"**Commands(18)**\nAll commands must start with a prefix.\nDefault prefix is `-`.\n\nTo view commands via category,select a category in the select menu below.\nTo view more information on a certain command,use `help <command>`.",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
-            e1 = discord.Embed(title="➜ **Moderation**", description="\n`setprefix`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
+            e1 = discord.Embed(title="➜ **Moderation**", description="\n`setprefix`, `purge`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
             e2 = discord.Embed(title="➜ **Utility**", description="\n`bugreport`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
-            e3 = discord.Embed(title="➜ **Info**", description="\n`help`,`info`,`ping`,`time`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
-            e4 = discord.Embed(title="➜ **Calculation**", description="\n`calculator`,`add`,`sub`,`mul`,`div`,`sqrt`,`factorial`,`random`,`length`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
+            e3 = discord.Embed(title="➜ **Info**", description="\n`help`, `info`, `ping`, `time`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
+            e4 = discord.Embed(title="➜ **Calculation**", description="\n`calculator`, `add`, `sub`, `mul`, `div`, `sqrt`, `factorial`, `random`, `length`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
             e5 = discord.Embed(title="➜ **Fun**", description="\n`quiz`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
-            e6 = discord.Embed(title="➜ **More**", description="\n`genpassw`,`remindme`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
+            e6 = discord.Embed(title="➜ **More**", description="\n`genpassw`, `remindme`, `crypto`, `curcodes`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
 
             while True:
                 try:
@@ -127,6 +125,30 @@ class Help(commands.Cog):
                 except discord.NotFound:
                     print("discord not found error")
 
+        elif command == "linear".lower():
+            LINEARcommand=discord.Embed(title="**Command 'linear'**",description="\n• **Usage** : `-linear <equation>`\n• **Description** : Sends a graph image of equation.",colour=discord.Color.dark_theme())
+            await ctx.send(embed=LINEARcommand)
+        elif command == "linear".upper():
+            LINEARcommand=discord.Embed(title="**Command 'linear'**",description="\n• **Usage** : `-linear <equation>`\n• **Description** : Sends a graph image of equation.",colour=discord.Color.dark_theme())
+            await ctx.send(embed=LINEARcommand)
+        elif command == "curcodes".lower():
+            CURCODEScommand=discord.Embed(title="**Command 'curcodes'**",description="\n• **Usage** : `-curcodes`\n• **Description** : Sends a link that shows the currency codes.",colour=discord.Color.dark_theme())
+            await ctx.send(embed=CURCODEScommand)
+        elif command == "curcodes".upper():
+            CURCODEScommand=discord.Embed(title="**Command 'curcodes'**",description="\n• **Usage** : `-curcodes`\n• **Description** : Sends a link that shows the currency codes.",colour=discord.Color.dark_theme())
+            await ctx.send(embed=CURCODEScommand)
+        elif command == "crypto".lower():
+            CRYPTOcommand=discord.Embed(title="**Command 'crypto'**",description="\n• **Usage** : `-crypto`\n• **Description** : Shows the crypto currency.",colour=discord.Color.dark_theme())
+            await ctx.send(embed=CRYPTOcommand)
+        elif command == "crypto".upper():
+            CRYPTOcommand=discord.Embed(title="**Command 'crypto'**",description="\n• **Usage** : `-crypto`\n• **Description** : Shows the crypto currency.",colour=discord.Color.dark_theme())
+            await ctx.send(embed=CRYPTOcommand)
+        elif command == "purge".lower():
+            PURGEembed=discord.Embed(title="**Command 'purge'**",description="\n• **Usage** : `-purge <amount>`\n• **Description** : Deletes the entered amount of messages.\n• **Note** : Administrator permission is required to use this command.",colour=discord.Color.dark_theme())
+            await ctx.send(embed=PURGEembed)
+        elif command == "purge".upper():
+            PURGEembed=discord.Embed(title="**Command 'purge'**",description="\n• **Usage** : `-purge <amount>`\n• **Description** : Deletes the entered amount of messages.\n• **Note** : Administrator permission is required to use this command.",colour=discord.Color.dark_theme())
+            await ctx.send(embed=PURGEembed)
         elif command == "setprefix".lower():
             SETPREFIXembed=discord.Embed(title="**Command 'setprefix'**",description="\n• **Usage** : `-setprefix <prefix>`\n• **Description** : Changes the prefix in server.\n• **Note** : Administrator permission is required to use this command.",colour=discord.Color.dark_theme())
             await ctx.send(embed=SETPREFIXembed)
