@@ -67,7 +67,7 @@ class Help(commands.Cog):
             e1 = discord.Embed(title="➜ **Moderation**", description="\n`setprefix`, `purge`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
             e2 = discord.Embed(title="➜ **Utility**", description="\n`bugreport`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
             e3 = discord.Embed(title="➜ **Info**", description="\n`help`, `info`, `ping`, `time`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
-            e4 = discord.Embed(title="➜ **Calculation**", description="\n`calculator`, `add`, `sub`, `mul`, `div`, `sqrt`, `factorial`, `random`, `length`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
+            e4 = discord.Embed(title="➜ **Calculation**", description="\n`calculator`, `add`, `sub`, `mul`, `div`, `sqrt`, `factorial`, `random`, `length`, `linear`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
             e5 = discord.Embed(title="➜ **Fun**", description="\n`quiz`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
             e6 = discord.Embed(title="➜ **More**", description="\n`genpassw`, `remindme`, `crypto`, `curcodes`",colour=discord.Color.from_rgb(0,255,148),timestamp=datetime.datetime.utcnow())
 
