@@ -1,0 +1,29 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "Calculator is a discord bot developed to help you for your basic math operations.",
+  "main": "app.js",
+  "scripts": {
+    "test": "-help"
+  },
+  "keywords": [],
+  "author": "451 - Emir Kaan",
+  "license": "ISC",
+  "dependencies": {
+    "ascii-art": "^2.8.5",
+    "ascii-table": "^0.0.9",
+    "discord-buttons": "^4.0.0",
+    "discord-math": "^1.0.5",
+    "discord-prefix": "^3.0.0",
+    "discord.js": "^13.1.0",
+    "figlet": "^1.5.2",
+    "generate-password": "^1.6.1",
+    "mathjs": "^9.4.4",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.33",
+    "ms": "^2.1.3",
+    "simply-djs": "^2.0.2",
+    "weather-js": "^2.0.0",
+    "weky": "^3.1.5"
+  }
+}
