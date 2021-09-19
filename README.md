@@ -12,7 +12,7 @@
 
 -I used Visual Studio Code as editor and discord.js as library.
 
--New features will come with updates,take a look to <a href="https://github.com/451EK/CalculationBot/blob/main/current--version">current--version</a> file to see current bot version.  
+-New features will come with updates.  
 
 -You can come to <a href="https://discord.gg/tXd9gPtKCj">Support Server</a> to give suggestion or get support and information.
 
