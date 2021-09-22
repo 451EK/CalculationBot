@@ -23,7 +23,7 @@ module.exports = {
                 const latency = m.createdTimestamp - message.createdTimestamp
                 let embed2 = new MessageEmbed()
                 .setTitle(title="Latency")
-                .setDescription(this.description=`Roundtrip\n<:normal_performance:872498173292208239> ${ping}\n\n**Heartbeat**\n💓 **${latency}ms**`)
+                .setDescription(this.description=`**Roundtrip**\n<:normal_performance:872498173292208239> **${ping}ms**\n\n**Heartbeat**\n💓 **${latency}ms**`)
                 .setTimestamp()
                 .setFooter(text="Calculator#0261",iconURL = botIcon)
                 .setColor("#00ff94")
