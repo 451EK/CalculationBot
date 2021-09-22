@@ -32,7 +32,7 @@ module.exports = {
         .setTitle(title="**Info**")
         .setDescription(this.description="Calculator is a discord bot developed to help you for your basic math operations.")
         .setFields(
-            {name : "Author",value: "[451#2950](https://discord.com/users/453613270725558292)", inline:true},
+            {name : "Author",value: "[Emir.#2950](https://discord.com/users/453613270725558292)", inline:true},
             {name: "Library", value:"[discord.js](https://discord.js.org/#/)",inline:true},
             {name: "Uptime", value:`${d}d, ${h}h, ${m}m`,inline:true},
             {name: "Users", value:`${users}`,inline:true},
