@@ -17,8 +17,7 @@ module.exports = {
         .setTitle("**Your Report Has Successfully Been Sent!**")
         .setColor("#00ff94")
         channel.send({embeds:[embed]})
-        message.channel.send({embeds:[embed]}).then(msg => {
-            setTimeout(() => msg.delete(),3000)
-        })
+        message.channel.send({embeds:[doneEmbed]})
+        message.delete()
     }
 }
