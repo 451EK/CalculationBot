@@ -14,7 +14,7 @@ module.exports = {
                 footer: "Calculator",
                 timestamp: true,
             },
-            disabledQuery: "true",
+            disabledQuery: "Calculator Disabled",
             invalidQuery: 'The provided equation is invalid!',
 			othersMessage: 'Only <@{{author}}> can use the buttons!',
         })
