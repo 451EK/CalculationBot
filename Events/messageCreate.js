@@ -20,7 +20,7 @@ client.on("messageCreate", message => {
         client.commands.get("math").run(message,args)
     }
     else if(command == "calculator"){
-        client.commands.get("calculator").run(message)
+        client.commands.get("calculator").run(client,message)
     }
     else if(command == "curcodes"){
         client.commands.get("curcodes").run(message)
