@@ -46,4 +46,19 @@ client.on("messageCreate", message => {
     else if(command== "weather"){
         client.commands.get("weather").run(client,message,args)
     }
+    else if(command== "serverinfo"){
+        client.commands.get("serverinfo").run(client,message)
+    }
+    else if(command== "userinfo"){
+        client.commands.get("userinfo").run(client,message,args)
+    }
+    else if(command== "stats"){
+        client.commands.get("stats").run(client,message)
+    }
+    else if(command== "ascii"){
+        client.commands.get("ascii").run(client,message,args)
+    }
+    else if(command== "google"){
+        client.commands.get("google").run(client,message,args)
+    }
 })
