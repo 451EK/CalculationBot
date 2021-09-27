@@ -12,9 +12,9 @@ module.exports = {
         client.guilds.cache.forEach(guilds => allUsers.push(guilds.memberCount))
         let users = allUsers.reduce((a, b) => a + b)
         const ToTalSeconds = (client.uptime / 1000);
-        const d = Math.floor(ToTalSeconds / 86400);
-        const h = Math.floor(ToTalSeconds / 3600);
-        const m = Math.floor(ToTalSeconds / 60);
+        const d = Math.floor((ToTalSeconds % 31536000) / 86400);
+        const h = Math.floor((ToTalSeconds / 3600) % 24);
+        const m = Math.floor((ToTalSeconds / 60) % 60);
         const s = Math.floor(ToTalSeconds % 60);
         const Uptime = "`"+`${d}d, ${h}h, ${m}m, ${s}s`+"`";
         const os = require("os")
@@ -31,7 +31,7 @@ module.exports = {
         .setColor("#00ff94")
         .setThumbnail(client.user.avatarURL())
         .addField("__Bot Uptime __","`"+ Uptime +"`",true)
-        .addField("__Bot's Hot Name__","`"+ OsHostName+"`" ,true)
+        .addField("__Host Name__","`"+ OsHostName+"`" ,true)
         .addField("__CPU Usage__","`"+RamUsage+"Mb`" ,true)
         .addField("__Memory Usage__","`"+ MemoryUsed +"Mb`",true)
         .addField("__Bot Platform__","`"+ BotPlatform+"`" ,true)
