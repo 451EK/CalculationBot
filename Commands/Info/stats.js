@@ -8,7 +8,9 @@ module.exports = {
     run: async(client,message) => {
         const channels = client.channels.cache.size
         const servers =client.guilds.cache.size
-        const users = client.users.cache.size
+        let allUsers = [];
+        client.guilds.cache.forEach(guilds => allUsers.push(guilds.memberCount))
+        let users = allUsers.reduce((a, b) => a + b)
         const ToTalSeconds = (client.uptime / 1000);
         const d = Math.floor(ToTalSeconds / 86400);
         const h = Math.floor(ToTalSeconds / 3600);
