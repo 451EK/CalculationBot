@@ -13,6 +13,41 @@ module.exports = {
             .setColor("#00ff94")
             message.channel.send({embeds:[embed]})
         }
+        else if(args[0] == "google"){
+            let embed = new MessageEmbed()
+            .setTitle("Command `google`")
+            .setDescription(`• **Usage**: ${client.commands.get("google").usage}\n• **Description**: ${client.commands.get("google").description}`)
+            .setColor("#00ff94")
+            message.channel.send({embeds:[embed]})
+        }
+        else if(args[0] == "ascii"){
+            let embed = new MessageEmbed()
+            .setTitle("Command `ascii`")
+            .setDescription(`• **Usage**: ${client.commands.get("ascii").usage}\n• **Description**: ${client.commands.get("ascii").description}`)
+            .setColor("#00ff94")
+            message.channel.send({embeds:[embed]})
+        }
+        else if(args[0] == "stats"){
+            let embed = new MessageEmbed()
+            .setTitle("Command `stats`")
+            .setDescription(`• **Usage**: ${client.commands.get("stats").usage}\n• **Description**: ${client.commands.get("stats").description}`)
+            .setColor("#00ff94")
+            message.channel.send({embeds:[embed]})
+        }
+        else if(args[0] == "userinfo"){
+            let embed = new MessageEmbed()
+            .setTitle("Command `userinfo`")
+            .setDescription(`• **Usage**: ${client.commands.get("userinfo").usage}\n• **Description**: ${client.commands.get("userinfo").description}`)
+            .setColor("#00ff94")
+            message.channel.send({embeds:[embed]})
+        }
+        else if(args[0] == "serverinfo"){
+            let embed = new MessageEmbed()
+            .setTitle("Command `serverinfo`")
+            .setDescription(`• **Usage**: ${client.commands.get("serverinfo").usage}\n• **Description**: ${client.commands.get("serverinfo").description}`)
+            .setColor("#00ff94")
+            message.channel.send({embeds:[embed]})
+        }
         else if(args[0] == "factorial"){
             let embed = new MessageEmbed()
             .setTitle("Command `factorial`")
@@ -174,7 +209,7 @@ module.exports = {
 
         let embed4 = new MessageEmbed()
         .setTitle("**➜ Info**")
-        .setDescription("\n`help`, `info`, `ping`, `time`, `weather`")
+        .setDescription("\n`help`, `info`, `ping`, `time`, `weather`, `serverinfo`, `userinfo`, `stats`")
         .setColor("#00ff94")
 
         let embed5 = new MessageEmbed()
@@ -184,12 +219,12 @@ module.exports = {
 
         let embed7 = new MessageEmbed()
         .setTitle("**➜ More**")
-        .setDescription("\n`curcodes`")
+        .setDescription("\n`ascii`, `curcodes`, `google`")
         .setColor("#00ff94")
 
         let embed8 = new MessageEmbed()
-        .setTitle("**All Commands (13)**")
-        .setDescription("\n`bugreport`, `calculator`, `curcodes`, `factorial`, `help`, `info`, `length`, `math`, `ping`, `purge`, `sqrt`, `time`, `weather`")
+        .setTitle("**All Commands (18)**")
+        .setDescription("\n`ascii`,`bugreport`, `calculator`, `curcodes`, `factorial`, `google`, `help`, `info`, `length`, `math`, `ping`, `purge`, `serverinfo`, `stats`, `sqrt`, `time`, `userinfo`, `weather`")
         .setColor("#00ff94")
 
         const collector = message.channel.createMessageComponentCollector({
