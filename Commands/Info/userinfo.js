@@ -7,7 +7,16 @@ module.exports = {
     usage: "-userinfo <user>",
     description: "Shows the information about user.",
     run: async(client,message,args) => {
-        const user = message.mentions.users.first() || message.author  // ! should make it so we don't have to mention member
+        let user;
+        if (message.mentions.users.first()) {
+          user = message.mentions.users.first()
+        } else if (args[0]) {
+          let pre = message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(member => member.user.username === args[0])
+          if (pre) user = pre.user;
+          else if(!pre) user= message.author
+        } else {
+          user = message.author;
+        }
         const member = message.guild.members.cache.get(user.id)
         const roles = member.roles.cache.filter(role => role.id !== message.guild.id).map(role => role).join(", ") || "none"
 
