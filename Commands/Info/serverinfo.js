@@ -84,7 +84,7 @@ module.exports = {
         .addField("Features", `${discovery} : Discovery\n${news} : News Channel\n${community} : Community\n${welcomeScreen} : Welcome Screen\n${anIcon} : Animated Icon\n${banner} : Banner\n${partner} : Partnered\n${vanityURL} : Vanity URL\n${verified} : Verified\n ${PrivThreads} : Private Threads\n ${vgate} : Verification Gate`,true)
         .addField("Channels", `<:TextChannel:891594350922960927> ${textChannels}\n<:VoiceChannel:891594350902009906> ${voiceChannels}`,true)
         .addField("Boosts", `<:ServerBoostLevel:891600054761168916> ${boostTier} Level \n<:ServerBoost:891599828465885234> ${message.guild.premiumSubscriptionCount} Boosts`)
-        .addField("Members", `Total: ${members.size}\nBots: ${bots}\n<:online:891229323766403092> ${allOnline}  <:offline:891229323388940300> ${offlineMember}`)
+        .addField("Members", `Total: ${guild.memberCount}\nBots: ${bots}\n<:online:891229323766403092> ${allOnline}  <:offline:891229323388940300> ${offlineMember}`)
         .addField(`Roles`, `${roles.length - 1} Roles\nHighest Role: ${guild.roles.highest}`)
         .addField("Emoji Count",`Total Emoji Count: ${guild.emojis.cache.size}\nRegular Emoji Count: ${guild.emojis.cache.filter(emoji => !emoji.animated).size}\nAnimated Emoji Count: ${guild.emojis.cache.filter(emoji => emoji.animated).size}`)
         await message.channel.send({embeds:[embed]})
