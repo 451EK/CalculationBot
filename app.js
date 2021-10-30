@@ -4,14 +4,7 @@ const { Intents,Collection } = Discord;
 const client = new Discord.Client({
     "intents": [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_PRESENCES]
 })
-const { AutoPoster } = require('topgg-autoposter')
 const config = require("./config.json")
-
-const ap = AutoPoster("TOP.GG TOKEN", client)
-
-ap.on('posted', () => {
-  console.log('Posted stats to Top.gg!')
-})
 
 module.exports = client;
 client.commands = new Collection();
