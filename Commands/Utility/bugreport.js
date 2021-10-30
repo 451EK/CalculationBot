@@ -6,7 +6,7 @@ module.exports = {
     description: "Sends a bug report message to developer.",
     note: "Please do not abuse this command.",
     run: async(client,message,args) => {
-        channel = client.channels.cache.get("886670462950723674")
+        channel = client.channels.cache.get("901756235035082832")
         embed = new MessageEmbed()
         .setTitle("New Bug Report")
         .setDescription(`🚨 ${args.join(" ")}`)
