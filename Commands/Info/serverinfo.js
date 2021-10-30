@@ -14,51 +14,51 @@ module.exports = {
         const humans = guild.members.cache.filter(member => !member.user.bot);
         const roles = guild.roles.cache.sort((a, b) => b.position - a.position).map(role => role.toString());
 
-        let vgate = '<:NOTavailable:872500934998126592>' // MEMBER_VERIFICATION_GATE_ENABLED
-        let news = '<:NOTavailable:872500934998126592>' // NEWS
-        let community = '<:NOTavailable:872500934998126592>' // COMMUNITY
-        let anIcon = "<:NOTavailable:872500934998126592>" // ANIMATED_ICON
-        let discovery= "<:NOTavailable:872500934998126592>" // DISCOVERABLE
-        let welcomeScreen= "<:NOTavailable:872500934998126592>" // WELCOME_SCREEN_ENABLED
-        let banner= "<:NOTavailable:872500934998126592>" // BANNER
-        let partner="<:NOTavailable:872500934998126592>" // PARTNERED
-        let vanityURL= "<:NOTavailable:872500934998126592>" // VANITY_URL
-        let verified="<:NOTavailable:872500934998126592>" // VERIFIED
-        let PrivThreads="<:NOTavailable:872500934998126592>" // PRIVATE_THREADS
+        let vgate = '<:NOTavailable:901757473252335636>' // MEMBER_VERIFICATION_GATE_ENABLED
+        let news = '<:NOTavailable:901757473252335636>' // NEWS
+        let community = '<:NOTavailable:901757473252335636>' // COMMUNITY
+        let anIcon = "<:NOTavailable:901757473252335636>" // ANIMATED_ICON
+        let discovery= "<:NOTavailable:901757473252335636>" // DISCOVERABLE
+        let welcomeScreen= "<:NOTavailable:901757473252335636>" // WELCOME_SCREEN_ENABLED
+        let banner= "<:NOTavailable:901757473252335636>" // BANNER
+        let partner="<:NOTavailable:901757473252335636>" // PARTNERED
+        let vanityURL= "<:NOTavailable:901757473252335636>" // VANITY_URL
+        let verified="<:NOTavailable:901757473252335636>" // VERIFIED
+        let PrivThreads="<:NOTavailable:901757473252335636>" // PRIVATE_THREADS
 
         features = guild.features
         if (features.includes("ANIMATED_ICON") === true){
-            anIcon = "<:available:872499547891449876>"
+            anIcon = "<:Available:901757472904200264>"
         }
         if (features.includes("COMMUNITY") === true){
-            community = "<:available:872499547891449876>"
+            community = "<:Available:901757472904200264>"
         }
         if (features.includes("MEMBER_VERIFICATION_GATE_ENABLED") === true){
-            vgate = "<:available:872499547891449876>"
+            vgate = "<:Available:901757472904200264>"
         }
         if (features.includes("NEWS") === true){
-            news = "<:available:872499547891449876>"
+            news = "<:Available:901757472904200264>"
         }
         if (features.includes("DISCOVERABLE") === true){
-            discovery = "<:available:872499547891449876>"
+            discovery = "<:Available:901757472904200264>"
         }
         if (features.includes("WELCOME_SCREEN_ENABLED") === true){
-            welcomeScreen = "<:available:872499547891449876>"
+            welcomeScreen = "<:Available:901757472904200264>"
         }
         if (features.includes("BANNER") === true){
-            banner = "<:available:872499547891449876>"
+            banner = "<:Available:901757472904200264>"
         }
         if (features.includes("PARTNERED") === true){
-            partner = "<:available:872499547891449876>"
+            partner = "<:Available:901757472904200264>"
         }
         if (features.includes("VANITY_URL") === true){
-            vanityURL = "<:available:872499547891449876>"
+            vanityURL = "<:Available:901757472904200264>"
         }
         if (features.includes("VERIFIED") === true){
-            verified = "<:available:872499547891449876>"
+            verified = "<:Available:901757472904200264>"
         }
         if (features.includes("PRIVATE_THREADS") === true){
-            PrivThreads = "<:available:872499547891449876>"
+            PrivThreads = "<:Available:901757472904200264>"
         }
 
         var textChannels = channels.filter(channel => channel.type === 'GUILD_TEXT').size
@@ -82,9 +82,9 @@ module.exports = {
         .setTimestamp(guild.createdTimestamp)
         .setFooter(`Server Created`)
         .addField("Features", `${discovery} : Discovery\n${news} : News Channel\n${community} : Community\n${welcomeScreen} : Welcome Screen\n${anIcon} : Animated Icon\n${banner} : Banner\n${partner} : Partnered\n${vanityURL} : Vanity URL\n${verified} : Verified\n ${PrivThreads} : Private Threads\n ${vgate} : Verification Gate`,true)
-        .addField("Channels", `<:TextChannel:891594350922960927> ${textChannels}\n<:VoiceChannel:891594350902009906> ${voiceChannels}`,true)
+        .addField("Channels", `<:TextChannel:901757472971309056> ${textChannels}\n<:VoiceChannel:901757472954519634> ${voiceChannels}`,true)
         .addField("Boosts", `<:ServerBoostLevel:891600054761168916> ${boostTier} Level \n<:ServerBoost:891599828465885234> ${message.guild.premiumSubscriptionCount} Boosts`)
-        .addField("Members", `Total: ${guild.memberCount}\nBots: ${bots}\n<:online:891229323766403092> ${allOnline}`)
+        .addField("Members", `Total: ${guild.memberCount}\nBots: ${bots}\n<:Online:901757472958713856> ${allOnline}`)
         .addField(`Roles`, `${roles.length - 1} Roles\nHighest Role: ${guild.roles.highest}`)
         .addField("Emoji Count",`Total Emoji Count: ${guild.emojis.cache.size}\nRegular Emoji Count: ${guild.emojis.cache.filter(emoji => !emoji.animated).size}\nAnimated Emoji Count: ${guild.emojis.cache.filter(emoji => emoji.animated).size}`)
         await message.channel.send({embeds:[embed]})
