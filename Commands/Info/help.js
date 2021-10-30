@@ -13,6 +13,13 @@ module.exports = {
             .setColor("#00ff94")
             message.channel.send({embeds:[embed]})
         }
+        else if(args[0] == "race"){
+            let embed = new MessageEmbed()
+            .setTitle("Command `race`")
+            .setDescription(`• **Usage**: ${client.commands.get("race").usage}\n• **Description**: ${client.commands.get("race").description}`)
+            .setColor("#00ff94")
+            message.channel.send({embeds:[embed]})
+        }
         else if(args[0] == "google"){
             let embed = new MessageEmbed()
             .setTitle("Command `google`")
@@ -170,6 +177,12 @@ module.exports = {
                     emoji: "📑"
                 },
                 {
+                    label:"Fun",
+                    description:"Fun Menu",
+                    value:"fun",
+                    emoji: "🎉"
+                },
+                {
                     label:"More",
                     description:"More Commands",
                     value:"more",
@@ -185,7 +198,7 @@ module.exports = {
         )
         let mainEmbed = new MessageEmbed()
         .setTitle("**Help**")
-        .setDescription(`\n\nStill having issues?\nJoin the Support Server by clicking [here](https://discord.gg/tXd9gPtKCj).`)
+        .setDescription(`\n\nStill having issues?\nJoin the Support Server by clicking [here](https://discord.gg/f2K4DndEMN).`)
         .setColor("#00ff94")
         .setFooter(`Requested by ${message.author.tag}`,message.author.avatarURL())
 
@@ -193,7 +206,7 @@ module.exports = {
 
         let embed1 = new MessageEmbed()
         .setTitle("General Informations")
-        .setDescription("All commands must start with a prefix.\nDefault prefix is -.(Not changeable yet.)\n\nTo view commands via category,select a category in the select menu below.\nTo view more information on a certain command,use help <command>.")
+        .setDescription("All commands must start with a prefix.\nDefault prefix is `-`.\n\nTo view commands via category,select a category in the select menu below.\nTo view more information on a certain command,use help <command>.")
         .setColor("#00ff94")
         .setTimestamp()
 
@@ -223,8 +236,13 @@ module.exports = {
         .setColor("#00ff94")
 
         let embed8 = new MessageEmbed()
-        .setTitle("**All Commands (18)**")
-        .setDescription("\n`ascii`,`bugreport`, `calculator`, `curcodes`, `factorial`, `google`, `help`, `info`, `length`, `math`, `ping`, `purge`, `serverinfo`, `stats`, `sqrt`, `time`, `userinfo`, `weather`")
+        .setTitle("**All Commands (19)**")
+        .setDescription("\n`ascii`,`bugreport`, `calculator`, `curcodes`, `factorial`, `google`, `help`, `info`, `length`, `math`, `ping`, `purge`, `race`, `serverinfo`, `stats`, `sqrt`, `time`, `userinfo`, `weather`")
+        .setColor("#00ff94")
+
+        let embed9 = new MessageEmbed()
+        .setTitle("**➜ Fun**")
+        .setDescription("\n`race`")
         .setColor("#00ff94")
 
         const collector = message.channel.createMessageComponentCollector({
@@ -253,6 +271,9 @@ module.exports = {
             }
             else if ( value === "all"){
                 collected.reply({embeds:[embed8], ephemeral: true})
+            }
+            else if ( value === "fun"){
+                collected.reply({embeds:[embed9], ephemeral: true})
             }
         })
     }
