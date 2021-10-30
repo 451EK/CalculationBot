@@ -30,16 +30,16 @@ module.exports = {
 
         let status = member.presence?.status
         if (status === "online"){
-            status = "<:online:891229323766403092> Online"
+            status = "<:Online:901757472958713856> Online"
         }
         if (status === "idle"){
-            status = "<:idle:891229377021480962> Idle"
+            status = "<:Idle:901757472912601139> Idle"
         }
         if (status === "dnd"){
-            status = "<:dnd:891229377403166751> Do Not Disturb"
+            status = "<:DoNotDisturb:901757473080348672> Do Not Disturb"
         }
         if (status === "offline"){
-            status = "<:offline:891229323388940300> Offline"
+            status = "<:Offline:901757472824496169> Offline"
         }
 
         let verifiedBotDeveloperBadge = ""
@@ -51,25 +51,25 @@ module.exports = {
         let hypesquadBalance = ""
 
         if (user.flags.has("PARTNERED_SERVER_OWNER")){
-            discordPartnerBadge = "<:PartnerBadge:891724938703155270>"
+            discordPartnerBadge = "<:DiscordPartnerBadge:901757473071972363>"
         }
         if (user.flags.has("HOUSE_BALANCE")){
-            hypesquadBalance = "<:HypeSquadBalance:891723099211444234>"
+            hypesquadBalance = "<:HypeSquadBalance:901757473420095529>"
         }
         if (user.flags.has("EARLY_VERIFIED_BOT_DEVELOPER")){
-            verifiedBotDeveloperBadge = "<:VerifiedBotDeveloperBadge:891720363321471006>"
+            verifiedBotDeveloperBadge = "<:VerifiedDeveloperBadge:901757472975499314>"
         }
         if (user.flags.has("EARLY_SUPPORTER")){
-            earlySupporterBadge = "<:EarlySupporterBadge:891720643240939581>"
+            earlySupporterBadge = "<:EarlySupporterBadge:901757473424297985>"
         }
         if (user.flags.has("HYPESQUAD_EVENTS")){
-            hypesquadEventsBadge = "<:HypeSquadEventsBadge:891724366746910760>"
+            hypesquadEventsBadge = "<:HypeSquadEvents:901757473382350888>"
         }
         if (user.flags.has("HOUSE_BRAVERY")){
-            hypesquadBravery = "<:HypeSquadBravery:891723098666188821>"
+            hypesquadBravery = "<:HypeSquadBravery:901757473214582835>"
         }
         if (user.flags.has("HOUSE_BRILLIANCE")){
-            hypesquadBrilliance = "<:HypeSquadBrilliance:891723098934607943>"
+            hypesquadBrilliance = "<:HypeSquadBrilliance:901757473210372106>"
         }
 
         const allBadges = `${verifiedBotDeveloperBadge} ${earlySupporterBadge} ${hypesquadEventsBadge} ${discordPartnerBadge} ${hypesquadBravery} ${hypesquadBrilliance} ${hypesquadBalance}`
