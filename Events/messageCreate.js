@@ -61,4 +61,7 @@ client.on("messageCreate", message => {
     else if(command== "google"){
         client.commands.get("google").run(client,message,args)
     }
+    else if(command== "race"){
+        client.commands.get("race").run(client,message)
+    }
 })
