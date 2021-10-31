@@ -1,12 +1,16 @@
 const client = require('../app.js');
 
 client.on('ready', async client =>{
-    let allUsers = [];
-    client.guilds.cache.forEach(guilds => allUsers.push(guilds.memberCount))
-    let users = allUsers.reduce((a, b) => a + b)
+    let allUsers = []
+
+    client.guilds.cache.forEach(guild => {
+      guild.members.cache.forEach(member => {
+        if(member.user.bot) return
+        allUsers.push(member)
+      })
+    })
     console.log(`Logged in as ${client.user.tag} on ${client.guilds.cache.size} servers!`)
     let statuses = [
-        `👨‍🏫 ${users} Users`,
         `⚒️ -help`
     ]
     let i = 0;
